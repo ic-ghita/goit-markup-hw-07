@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  width: 1600px;
+  width: 428px;
   margin: 0 auto;
 }
 
@@ -60,21 +60,14 @@ ul {
   padding-left: 215px;
   border-bottom: 1px solid #ececec;
 }
+.header-without-logo {
+  display: none;
+}
 
 .global-header .navigation ul {
   display: flex;
   align-items: center;
   gap: 50px;
-}
-
-a.global-header {
-  padding-right: 93px;
-}
-
-.global-header .contact-data {
-  display: flex;
-  gap: 40px;
-  margin-left: 330px;
 }
 
 .portfolio-link::after {
@@ -134,17 +127,16 @@ a.global-header {
 /* FOOTER */
 
 .container-footer {
-  display: flex;
-  justify-content: center;
-
   width: 100%;
   background-color: var(--footer-background);
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
-  width: 1600px;
+  width: 1200px;
   height: 251px;
   background-color: var(--footer-background);
   padding-top: 60px;
@@ -356,13 +348,9 @@ a.global-header {
 /* DESCRIPTIVE SECTION INDEX */
 
 .paragraph-section {
-  gap: 30px;
   display: flex;
-  padding-top: 94px;
-  box-sizing: content-box;
-  width: 100%;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .paragraph-section div {
@@ -407,7 +395,7 @@ a.global-header {
 /* WHAT WE DO SECTION INDEX */
 
 .what-we-do {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -461,10 +449,7 @@ a.global-header {
 
 .our-team ul {
   display: flex;
-  justify-content: space-between;
-  width: 1200px;
-  padding-bottom: 94px;
-  padding-top: 50px;
+  flex-direction: column;
 }
 
 .our-team-names {
@@ -530,22 +515,22 @@ a.global-header {
 }
 
 /* REGULAR CUSTOMERS INDEX */
+
 .regular-customers {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .regular-customers .title {
   margin-top: 94px;
   margin-bottom: 50px;
 }
 
-.regular-customers div {
+/ .regular-customers div {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding-bottom: 94px;
-  width: 1200px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .regular-customers svg {
@@ -865,4 +850,93 @@ a.global-header {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.96px;
+}
+
+/* Tablet design */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .header-without-logo {
+    display: flex;
+  }
+
+  .global-header .contact-data {
+    display: flex;
+    flex-direction: column;
+    margin-left: 114px;
+  }
+
+  a.global-header {
+    padding-right: 15px;
+  }
+
+  .paragraph-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .our-team ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  / .regular-customers div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* Desktop design */
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1600px;
+    margin: 0 auto;
+  }
+
+  .what-we-do {
+    display: flex;
+  }
+
+  .global-header .contact-data {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-left: 330px;
+  }
+
+  a.global-header {
+    padding-right: 93px;
+  }
+
+  .paragraph-section {
+    gap: 30px;
+    display: flex;
+    padding-top: 94px;
+    box-sizing: content-box;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .regular-customers div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 94px;
+    width: 1200px;
+  }
+
+  .our-team ul {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    padding-bottom: 94px;
+    padding-top: 50px;
+  }
 }

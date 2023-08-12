@@ -23,26 +23,30 @@
         <a class="logo" href="index.html">
           <span class="web">Web</span>Studio
         </a>
-        <nav class="navigation">
-          <ul>
-            <li><a class="link studio-page" href="index.html">Studio</a></li>
-            <li><a class="link" href="portfolio.html">Portfolio</a></li>
-            <li><a class="link" href="#footer-link">Contacts</a></li>
-          </ul>
-        </nav>
-        <div class="contact-data">
-          <a class="link envelope-icon" href="mailto:info@devstudio.com">
-            <svg id="envelope">
-              <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com
-          </a>
-          <a class="link smartphone-icon" href="tel:+1212-772-4150"
-            ><svg id="smartphone">
-              <use href="./images/icons/symbol-defs.svg#icon-smartphone"></use>
-            </svg>
-            +1 212-772-4150
-          </a>
+        <div class="header-without-logo">
+          <nav class="navigation">
+            <ul>
+              <li><a class="link studio-page" href="index.html">Studio</a></li>
+              <li><a class="link" href="portfolio.html">Portfolio</a></li>
+              <li><a class="link" href="#footer-link">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="contact-data">
+            <a class="link envelope-icon" href="mailto:info@devstudio.com">
+              <svg id="envelope">
+                <use href="./images/icons/symbol-defs.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+            <a class="link smartphone-icon" href="tel:+1212-772-4150"
+              ><svg id="smartphone">
+                <use
+                  href="./images/icons/symbol-defs.svg#icon-smartphone"
+                ></use>
+              </svg>
+              +1 212-772-4150
+            </a>
+          </div>
         </div>
       </header>
       <main>
@@ -104,8 +108,14 @@
           <h2 class="title">What we do</h2>
           <ul>
             <li class="what-we-do-cards">
+              <picture>
+                <source
+                  media="(min-width:1158px)"
+                  srcset="images/coding-d.png, images/coding-x2-d.png"
+                />
+              </picture>
               <img
-                src="images/coding.jpg"
+                src="images/coding-d.png"
                 alt="Coding"
                 width="370"
                 height="294"
@@ -113,8 +123,17 @@
               <div class="what-we-do-overlay"><h2>DESKTOP APPS</h2></div>
             </li>
             <li class="what-we-do-cards">
+              <picture>
+                <source
+                  media="(min-width:1158px)"
+                  srcset="
+                    images/mobile-app-development-d.png,
+                    images/mobile-app-development-x2-d.png
+                  "
+                />
+              </picture>
               <img
-                src="images/mobile-app-development.jpg"
+                src="images/mobile-app-development-d.png"
                 alt="Mobile app development"
                 width="370"
                 height="294"
@@ -122,12 +141,16 @@
               <div class="what-we-do-overlay"><h2>MOBILE APPS</h2></div>
             </li>
             <li class="what-we-do-cards">
-              <img
-                src="images/color-palette.jpg"
-                alt="Color palette"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width:1158px)"
+                  srcset="
+                    images/color-palette-d.png,
+                    images/color-palette-x2-d.png
+                  "
+                />
+              </picture>
+              <img src="images/color-palette-d.png" alt="Color palette" />
               <div class="what-we-do-overlay"><h2>DESIGN SOLUTIONS</h2></div>
             </li>
           </ul>
@@ -136,12 +159,35 @@
           <h2 class="title">Our Team</h2>
           <ul>
             <li class="our-team-cards">
-              <img
-                src="images/christopher-walker.jpg"
-                alt="Christopher Walker"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width:1158px)"
+                  srcset="
+                    images/christopher-walker-d.png,
+                    images/christopher-walker-x2-d.png
+                  "
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    images/christopher-walker-t.png,
+                    images/christopher-walker-x2-t.png
+                  "
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="
+                    images/christopher-walker-m.png,
+                    images/christopher-walker-x2-m.png
+                  "
+                />
+                <img
+                  src="images/christopher-walker-m.png"
+                  alt=">Christopher Walker"
+                />
+              </picture>
               <div class="our-team-names">
                 <span class="name">Christopher Walker</span>
                 <span class="job-title">Product Designer</span>
@@ -194,12 +240,23 @@
               </div>
             </li>
             <li class="our-team-cards">
-              <img
-                src="images/kylie-evans.jpg"
-                alt=" Kylie Evans"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width:1158px)"
+                  srcset="images/kylie-evans-d.png, images/kylie-evans-x2-d.png"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="images/kylie-evans-t.png, images/tyler-moore-x2-t.png"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="images/kylie-evans-m.png, images/kylie-evans-x2-m.png"
+                />
+                <img src="images/kylie-evans-m.png" alt=">Kylie Evans" />
+              </picture>
               <div class="our-team-names">
                 <span class="name">Kylie Evans</span>
                 <span class="job-title">Frontend Developer</span>
@@ -252,12 +309,23 @@
               </div>
             </li>
             <li class="our-team-cards">
-              <img
-                src="images/ryan-harris.jpg"
-                alt="Ryan Harris"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width:1158px)"
+                  srcset="images/ryan-harris-d.png, images/ryan-harris-x2-d.png"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width:768px )"
+                  srcset="images/ryan-harris-t.png, images/ryan-harris-t-x2.png"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="images/ryan-harris-m.png, imagesryan-harris-m-x2.png"
+                />
+                <img src="images/ryan-harris-m.png" alt="Ryan Harris" />
+              </picture>
               <div class="our-team-names">
                 <span class="name">Ryan Harris</span>
                 <span class="job-title">Marketing</span>
@@ -310,12 +378,23 @@
               </div>
             </li>
             <li class="our-team-cards">
-              <img
-                src="images/tyler-moore.jpg"
-                alt="Tyler Moore"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Desktop -->
+                <source
+                  media="(min-width: 1158px)"
+                  srcset="images/tyler-moore-d.png, images/tyler-moore-x2-d.png"
+                />
+                <!-- Tablet -->
+                <source
+                  media="(min-width: 768px )"
+                  srcset="images/tyler-moore-t.png, images/tyler-moore-t-x2.png"
+                />
+                <!-- Mobile -->
+                <source
+                  srcset="images/tyler-moore-m.png, images/tyler-moore-m-x2.png"
+                />
+                <img src="images/tyler-moore-m.png" alt="Tyler Moore" />
+              </picture>
               <div class="our-team-names">
                 <span class="name">Tyler Moore</span>
                 <span class="job-title">UI Designer</span>
@@ -370,30 +449,30 @@
           </ul>
         </section>
       </main>
+      <section class="regular-customers">
+        <h2 class="title">Regular Customers</h2>
+        <div>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-1"></use>
+          </svg>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-2"></use>
+          </svg>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-3"></use>
+          </svg>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-4"></use>
+          </svg>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-5"></use>
+          </svg>
+          <svg>
+            <use href="./images/icons/symbol-defs.svg#icon-logo-6"></use>
+          </svg>
+        </div>
+      </section>
     </div>
-    <section class="regular-customers">
-      <h2 class="title">Regular Customers</h2>
-      <div>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-1"></use>
-        </svg>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-2"></use>
-        </svg>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-3"></use>
-        </svg>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-4"></use>
-        </svg>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-5"></use>
-        </svg>
-        <svg>
-          <use href="./images/icons/symbol-defs.svg#icon-logo-6"></use>
-        </svg>
-      </div>
-    </section>
     <div id="footer-link" class="container-footer">
       <footer class="footer">
         <div>
