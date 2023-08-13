@@ -365,6 +365,8 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .paragraph-section div {
@@ -464,6 +466,7 @@ ul {
 .our-team ul {
   display: flex;
   flex-direction: column;
+  gap: 30px;
 }
 
 .our-team-names {
@@ -540,11 +543,13 @@ ul {
   margin-top: 94px;
   margin-bottom: 50px;
 }
-
 .regular-customers div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 60px;
+  justify-content: center;
 }
 
 .regular-customers svg {
@@ -899,10 +904,6 @@ ul {
     gap: 10px;
   }
 
-  .envelope-icon,
-  .smartphone-icon {
-  }
-
   a.global-header {
     padding-right: 15px;
   }
@@ -911,12 +912,17 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 768px;
+    justify-content: center;
+    gap: 30px;
   }
 
   .our-team ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
   }
 
   .regular-customers div {
@@ -1012,6 +1018,15 @@ ul {
     justify-content: center;
   }
 
+  .our-team ul {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    padding-bottom: 94px;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
   .regular-customers div {
     display: flex;
     justify-content: center;
@@ -1020,13 +1035,6 @@ ul {
     width: 1200px;
   }
 
-  .our-team ul {
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-    padding-bottom: 94px;
-    padding-top: 50px;
-  }
   .service-request-section {
     display: flex;
     flex-direction: column;
@@ -1102,5 +1110,11 @@ ul {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+  }
+
+  .regular-customers div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
