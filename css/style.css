@@ -57,10 +57,10 @@ ul {
   display: flex;
   height: 80px;
   align-items: center;
-  padding-left: 215px;
   border-bottom: 1px solid #ececec;
 }
-.header-without-logo {
+
+.navigation {
   display: none;
 }
 
@@ -102,12 +102,6 @@ ul {
   height: 16px;
 }
 
-.envelope-icon,
-.smartphone-icon {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
 /* LOGO  */
 
 .logo {
@@ -131,6 +125,10 @@ ul {
   background-color: var(--footer-background);
   display: flex;
   justify-content: center;
+}
+.small-container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer {
@@ -288,16 +286,6 @@ ul {
 
 /*NAVBAR INDEX */
 
-.navigation {
-  display: flex;
-  color: var(--heading-color);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1em;
-  letter-spacing: 0.02em;
-  padding-left: 93px;
-}
-
 .contact-data a {
   color: #757575;
 }
@@ -316,16 +304,28 @@ ul {
   letter-spacing: 0.06em;
   text-align: center;
   height: 600px;
-  background-image: url("../images/bg-request-service.png"),
-    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img-m.png);
+  background-size: cover;
   background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .box {
+    background-image: url(../images/bg-img-x2-m.png);
+  }
 }
 
 .service-request-section h1 {
   font-size: 44px;
   font-weight: 900;
   line-height: 60px;
-  width: 696px;
+  max-width: 696px;
   text-align: center;
 }
 
@@ -343,6 +343,7 @@ ul {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-style: none;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 /* DESCRIPTIVE SECTION INDEX */
@@ -863,10 +864,30 @@ ul {
     display: flex;
   }
 
+  .navigation {
+    display: flex;
+    color: var(--heading-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 0.02em;
+    padding-left: 93px;
+  }
+
   .global-header .contact-data {
+    margin-left: 114px;
     display: flex;
     flex-direction: column;
-    margin-left: 114px;
+    gap: 10px;
+  }
+
+  .global-header .contact-data a {
+    display: flex;
+    gap: 10px;
+  }
+
+  .envelope-icon,
+  .smartphone-icon {
   }
 
   a.global-header {
@@ -892,6 +913,35 @@ ul {
   }
 }
 
+.service-request-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 3.75em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img-t.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .box {
+    background-image: url(../images/bg-img-t-x2.png);
+  }
+}
+
 /* Desktop design */
 @media screen and (min-width: 1158px) {
   .container {
@@ -903,11 +953,27 @@ ul {
     display: flex;
   }
 
+  .global-header {
+    position: relative;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid #ececec;
+    padding-left: 215px;
+  }
+
   .global-header .contact-data {
     display: flex;
     flex-direction: row;
     gap: 40px;
     margin-left: 330px;
+  }
+
+  .envelope-icon,
+  .smartphone-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 
   a.global-header {
@@ -938,5 +1004,34 @@ ul {
     width: 1200px;
     padding-bottom: 94px;
     padding-top: 50px;
+  }
+}
+
+.service-request-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 3.75em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  height: 600px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bg-img.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .box {
+    background-image: url(../images/bg-img-x2.png);
   }
 }

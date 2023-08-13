@@ -23,14 +23,12 @@
         <a class="logo" href="index.html">
           <span class="web">Web</span>Studio
         </a>
-        <div class="header-without-logo">
-          <nav class="navigation">
-            <ul>
-              <li><a class="link studio-page" href="index.html">Studio</a></li>
-              <li><a class="link" href="portfolio.html">Portfolio</a></li>
-              <li><a class="link" href="#footer-link">Contacts</a></li>
-            </ul>
-          </nav>
+        <nav class="navigation">
+          <ul>
+            <li><a class="link studio-page" href="index.html">Studio</a></li>
+            <li><a class="link" href="portfolio.html">Portfolio</a></li>
+            <li><a class="link" href="#footer-link">Contacts</a></li>
+          </ul>
           <div class="contact-data">
             <a class="link envelope-icon" href="mailto:info@devstudio.com">
               <svg id="envelope">
@@ -38,8 +36,8 @@
               </svg>
               info@devstudio.com
             </a>
-            <a class="link smartphone-icon" href="tel:+1212-772-4150"
-              ><svg id="smartphone">
+            <a class="link smartphone-icon" href="tel:+1212-772-4150">
+              <svg id="smartphone">
                 <use
                   href="./images/icons/symbol-defs.svg#icon-smartphone"
                 ></use>
@@ -47,7 +45,7 @@
               +1 212-772-4150
             </a>
           </div>
-        </div>
+        </nav>
       </header>
       <main>
         <section class="service-request-section">
@@ -475,57 +473,65 @@
     </div>
     <div id="footer-link" class="container-footer">
       <footer class="footer">
-        <div>
-          <a class="logo" href="index.html">
-            <span class="web">Web</span><span class="studio">Studio</span>
-          </a>
-          <address class="address">695 Park Ave, NY 10065, USA</address>
-          <div class="footer-contact">
-            <a class="contact" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
-            <a class="contact" href="tel:+1212-772-4150">+1 212-772-4150</a>
+        <div class="small-container">
+          <div>
+            <a class="logo" href="index.html">
+              <span class="web">Web</span><span class="studio">Studio</span>
+            </a>
+            <address class="address">695 Park Ave, NY 10065, USA</address>
+            <div class="footer-contact">
+              <a class="contact" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+              <a class="contact" href="tel:+1212-772-4150">+1 212-772-4150</a>
+            </div>
           </div>
-        </div>
-        <div class="find-us">
-          <span>FIND US ON</span>
-          <div class="footer-icons-list">
-            <a
-              href="https://www.instagram.com/"
-              class="icon"
-              aria-label="Instagram"
-            >
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
-              </svg>
-            </a>
-            <a
-              href="https://www.twitter.com/"
-              class="icon"
-              aria-label="Twitter"
-            >
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
-              </svg>
-            </a>
-            <a
-              href="https://www.facebook.com/"
-              class="icon"
-              aria-label="Facebook"
-            >
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
-              </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/"
-              class="icon"
-              aria-label="Linkedin"
-            >
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
-              </svg>
-            </a>
+          <div class="find-us">
+            <span>FIND US ON</span>
+            <div class="footer-icons-list">
+              <a
+                href="https://www.instagram.com/"
+                class="icon"
+                aria-label="Instagram"
+              >
+                <svg>
+                  <use
+                    href="./images/icons/symbol-defs.svg#icon-instagram"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.twitter.com/"
+                class="icon"
+                aria-label="Twitter"
+              >
+                <svg>
+                  <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.facebook.com/"
+                class="icon"
+                aria-label="Facebook"
+              >
+                <svg>
+                  <use
+                    href="./images/icons/symbol-defs.svg#icon-facebook"
+                  ></use>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/"
+                class="icon"
+                aria-label="Linkedin"
+              >
+                <svg>
+                  <use
+                    href="./images/icons/symbol-defs.svg#icon-linkedin"
+                  ></use>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
         <section class="subscribe-section">
@@ -543,65 +549,6 @@
           </button>
         </section>
       </footer>
-    </div>
-    <!-- Modal -->
-    <div class="modal is-hidden" data-modal>
-      <div class="modal-content">
-        <button class="close-btn" data-modal-close>&times;</button>
-        <div class="modal-title">
-          Leave your information and we'll call you back
-        </div>
-        <form class="request-form">
-          <div class="request-group">
-            <label for="name">Name</label>
-            <div class="request-group-icon">
-              <input type="text" name="name" id="name" class="form-field" />
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-person"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="request-group">
-            <label for="phone">Telephone</label>
-            <div class="request-group-icon">
-              <input type="tel" name="phone" id="phone" class="form-field" />
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-phone"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="request-group">
-            <label for="email">E-mail</label>
-            <div class="request-group-icon">
-              <input type="email" name="email" id="email" class="form-field" />
-              <svg>
-                <use href="./images/icons/symbol-defs.svg#icon-email"></use>
-              </svg>
-            </div>
-          </div>
-          <div class="request-group">
-            <label for="message">Comments</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Enter the text"
-            ></textarea>
-          </div>
-          <label class="terms-cond">
-            <input type="checkbox" name="checkbox" />
-            <svg class="checkbox-icon">
-              <use href="./images/icons/symbol-defs.svg#icon-checkbox"></use>
-            </svg>
-            <svg class="checked-icon">
-              <use href="./images/icons/symbol-defs.svg#icon-check"></use>
-            </svg>
-            I agree with the letter and accept the
-            <a href="" class="terms-cond-link">Terms and Conditions</a>
-          </label>
-          <button type="submit" class="request-btn-send">Send</button>
-        </form>
-      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>
