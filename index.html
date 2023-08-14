@@ -18,12 +18,44 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="js-menu-container">
-      <button class="js-close-menu">
+    <div class="js-menu-container is-open">
+      <button class="menu-toggle js-close-menu">
         <svg>
           <use href="./images/icons/symbol-defs.svg#icon-close_btn_m"></use>
         </svg>
       </button>
+      <div class="mobile-navigation">
+        <ul class="mobile-nav-pages">
+          <li><a class="link" href="index.html">Studio</a></li>
+          <li><a class="link" href="portfolio.html">Portfolio</a></li>
+          <li><a class="link" href="#footer-link">Contacts</a></li>
+        </ul>
+        <div class="mobile-contact-data">
+          <a href="tel:+1212-772-4150"> +1 212-772-4150 </a>
+          <a href="mailto:info@devstudio.com"> info@devstudio.com </a>
+        </div>
+        <ul class="mobile-social-media">
+          <li><a href="https://www.instagram.com/"> Instagram </a></li>
+          <li>
+            <img src="images/line.png" alt="line" />
+          </li>
+          <li>
+            <a href="https://www.twitter.com/"> Twitter </a>
+          </li>
+          <li>
+            <img src="images/line.png" alt="line" />
+          </li>
+          <li>
+            <a href="https://www.facebook.com//"> Facebook </a>
+          </li>
+          <li>
+            <img src="images/line.png" alt="line" />
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/"> Linkedin </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="container">
       <header class="global-header">
@@ -268,7 +300,7 @@
                 <img src="images/kylie-evans-m.png" alt=">Kylie Evans" />
               </picture>
               <div class="our-team-names">
-                <span class="name">Kylie Evans</span>
+                <span class="name"> Kylie Evans</span>
                 <span class="job-title">Frontend Developer</span>
                 <div class="icons-list">
                   <a

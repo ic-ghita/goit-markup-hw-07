@@ -72,21 +72,75 @@ ul {
   cursor: pointer;
 }
 
+.js-menu-container {
+  display: none;
+}
+
+.js-menu-container.is-open {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.16),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.08), 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  padding: 48px 40px;
+  margin-right: -17px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.mobile-nav-pages {
+  width: 139px;
+  height: 48px;
+  margin: 48px 301px 306px 40px;
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+.mobile-contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-left: 40px;
+  margin-bottom: 64px;
+}
+
+.mobile-social-media {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+  margin-bottom: 48px;
+}
+
 .js-close-menu svg {
   width: 40px;
   height: 40px;
 }
 
 .js-close-menu {
-  background: none;
+  background-color: transparent;
   border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  transition: color var(--transition);
 }
 
 .global-header {
   display: flex;
   height: 80px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   border-bottom: 1px solid #ececec;
 }
 
@@ -107,18 +161,7 @@ ul {
   height: 4px;
   border-radius: 2px;
   background-color: var(--active-color);
-  bottom: -1px;
-  display: flex;
-}
-
-.studio-page::after {
-  content: "";
-  position: absolute;
-  width: 42px;
-  height: 4px;
-  border-radius: 2px;
-  background-color: var(--active-color);
-  bottom: -1px;
+  bottom: -32px;
   display: flex;
 }
 
@@ -908,7 +951,7 @@ ul {
     margin: 0 auto;
   }
 
-  .js-menu-container {
+  .js-menu-container.is-open {
     display: none;
   }
   .menu-button {
@@ -924,9 +967,19 @@ ul {
     padding-left: 93px;
   }
 
-  .global-header {
-    width: 768px;
-    margin: 0;
+  .link {
+    position: relative;
+  }
+
+  .navigation .studio-page::after {
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--active-color);
+    bottom: -32px;
+    display: flex;
   }
 
   .global-header .contact-data {
@@ -1037,13 +1090,6 @@ ul {
 
   .what-we-do {
     display: flex;
-  }
-
-  .global-header {
-    width: 1170px;
-    margin: 0 auto;
-    padding: 0 auto;
-    border: 0;
   }
 
   .global-header .contact-data {
