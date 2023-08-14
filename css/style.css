@@ -52,11 +52,26 @@ ul {
 
 /* HEADER  */
 
+.mobile-menu {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.mobile-menu:hover,
+.mobile-menu:focus {
+  color: var(--active-color);
+  transition: color var(--transition);
+  cursor: pointer;
+}
+
 .global-header {
-  position: relative;
   display: flex;
   height: 80px;
   align-items: center;
+  justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
@@ -877,11 +892,9 @@ ul {
     width: 100%;
     margin: 0 auto;
   }
-
-  .header-without-logo {
-    display: flex;
+  .mobile-menu {
+    display: none;
   }
-
   .navigation {
     display: flex;
     color: var(--heading-color);
@@ -890,6 +903,11 @@ ul {
     line-height: 1em;
     letter-spacing: 0.02em;
     padding-left: 93px;
+  }
+
+  .global-header {
+    width: 768px;
+    margin: 0;
   }
 
   .global-header .contact-data {
@@ -982,19 +1000,17 @@ ul {
   }
 
   .global-header {
-    position: relative;
-    display: flex;
-    height: 80px;
-    align-items: center;
-    border-bottom: 1px solid #ececec;
-    padding-left: 215px;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 0;
   }
 
   .global-header .contact-data {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    margin-left: 330px;
+    margin-left: 339px;
   }
 
   .envelope-icon,
