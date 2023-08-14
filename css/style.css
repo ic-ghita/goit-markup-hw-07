@@ -52,19 +52,34 @@ ul {
 
 /* HEADER  */
 
-.mobile-menu {
+.menu-button {
   background: none;
   border: none;
-  width: 40px;
-  height: 40px;
   margin-right: 15px;
 }
 
-.mobile-menu:hover,
-.mobile-menu:focus {
+.menu-button svg {
+  width: 40px;
+  height: 40px;
+}
+
+.menu-button:hover,
+.menu-button:focus,
+.js-close-menu:hover,
+.js-close-menu:focus {
   color: var(--active-color);
   transition: color var(--transition);
   cursor: pointer;
+}
+
+.js-close-menu svg {
+  width: 40px;
+  height: 40px;
+}
+
+.js-close-menu {
+  background: none;
+  border: none;
 }
 
 .global-header {
@@ -712,7 +727,7 @@ ul {
 .modal-content {
   padding: 16px;
   background-color: #fff;
-  width: 528px;
+  width: 450px;
   margin: 0 auto;
   position: relative;
   border-radius: 4px;
@@ -773,7 +788,7 @@ ul {
   padding: 12px 16px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  width: 448px;
+  width: 370px;
   height: 120px;
   font-size: 14px;
   letter-spacing: 0.14px;
@@ -793,7 +808,7 @@ ul {
 .form-field {
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  width: 448px;
+  width: 370px;
   height: 40px;
   padding-left: 42px;
 }
@@ -833,7 +848,7 @@ ul {
   align-items: center;
   gap: 8px;
   color: #757575;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.42px;
   cursor: pointer;
@@ -850,7 +865,7 @@ ul {
 
 .terms-cond-link {
   color: #2196f3;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.42px;
   text-decoration-line: underline;
@@ -892,7 +907,11 @@ ul {
     width: 100%;
     margin: 0 auto;
   }
-  .mobile-menu {
+
+  .js-menu-container {
+    display: none;
+  }
+  .menu-button {
     display: none;
   }
   .navigation {
@@ -993,6 +1012,27 @@ ul {
   .container {
     width: 100%;
     margin: 0 auto;
+  }
+
+  .modal-content {
+    padding: 16px;
+    background-color: #fff;
+    width: 528px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .form-field,
+  .request-group textarea {
+    width: 448px;
+  }
+
+  .terms-cond,
+  .terms-cond a {
+    font-size: 14px;
   }
 
   .what-we-do {
