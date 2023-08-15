@@ -85,7 +85,6 @@ ul {
   flex-direction: column;
   width: 100vw;
   height: 100%;
-  padding: 48px 40px;
   margin-right: -17px;
   position: fixed;
   right: 0;
@@ -114,11 +113,35 @@ ul {
   margin-left: 40px;
   margin-bottom: 64px;
 }
-
+.mobile-menu-content-tel {
+  color: var(--active-color);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.68px;
+  text-decoration: none;
+}
+.mobile-menu-content-mail {
+  color: #757575;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-decoration: none;
+}
 .mobile-social-media {
   display: flex;
   gap: 10px;
   margin-left: 40px;
+  margin-bottom: 48px;
+}
+.mobile-menu-links-group {
+  color: var(--active-color);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.36px;
+  text-decoration: none;
   margin-bottom: 48px;
 }
 
@@ -135,6 +158,7 @@ ul {
   right: 15px;
   top: 10px;
   transition: color var(--transition);
+  margin-right: 15px;
 }
 
 .global-header {
@@ -285,6 +309,9 @@ ul {
   text-transform: uppercase;
 }
 
+/*
+  TODO: adjust effect on hover
+*/
 .footer-icons-list {
   display: flex;
   gap: 10px;
@@ -295,17 +322,6 @@ ul {
 .footer-icons-list .icon {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--transition);
-}
-
-.footer-icons-list:hover,
-.footer-icons-list:focus {
-  display: flex;
-  margin-top: 20px;
-  gap: 10px;
-  border-radius: 50%;
-  color: #fff;
-  transition: border var(--transition);
 }
 
 .subscribe-section {
@@ -1028,6 +1044,7 @@ ul {
   .js-menu-container.is-open {
     display: none;
   }
+
   .menu-button {
     display: none;
   }
@@ -1078,6 +1095,10 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+  }
+
+  .paragraph-description {
+    height: 60px;
   }
 
   .paragraph-svg {
@@ -1224,8 +1245,8 @@ ul {
 
   .our-team ul {
     display: flex;
-    justify-content: space-between;
-    width: 1200px;
+    justify-content: center;
+    width: 100%;
     padding-bottom: 94px;
     padding-top: 50px;
     gap: 30px;
