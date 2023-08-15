@@ -19,6 +19,7 @@
 
 body {
   font-family: var(--text-font-family);
+  overflow-x: hidden;
 }
 
 .container {
@@ -140,7 +141,7 @@ ul {
   display: flex;
   height: 80px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
@@ -185,6 +186,7 @@ ul {
   line-height: 1.9075em;
   letter-spacing: 0.03em;
   color: #000;
+  padding-left: 15px;
 }
 
 .web {
@@ -408,10 +410,10 @@ ul {
 }
 
 .service-request-section h1 {
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 60px;
-  max-width: 696px;
+  max-width: 360px;
   text-align: center;
 }
 
@@ -440,10 +442,11 @@ ul {
   align-items: center;
   padding-bottom: 60px;
   padding-top: 60px;
+  gap: 30px;
 }
 
 .paragraph-section div {
-  width: 270px;
+  width: 450px;
 }
 
 .paragraph-section div p {
@@ -478,7 +481,7 @@ ul {
 }
 
 .paragraph-svg {
-  padding: 25px 100px;
+  padding: 25px 190px;
 }
 
 /* WHAT WE DO SECTION INDEX */
@@ -525,8 +528,11 @@ ul {
   flex-direction: column;
   align-items: center;
   background-color: #f5f4fa;
+  padding: 94px 15px 50px 15px;
   padding-top: 94px;
   padding-bottom: 50px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .our-team-cards {
@@ -623,6 +629,7 @@ ul {
   gap: 30px;
   padding-bottom: 60px;
   justify-content: center;
+  width: 428px;
 }
 
 .regular-customers svg {
@@ -944,6 +951,73 @@ ul {
   letter-spacing: 0.96px;
 }
 
+@media screen and (max-width: 479px) {
+  .header {
+    width: 100%;
+  }
+  .js-menu-container {
+    width: 250px;
+  }
+  .mobile-navigation {
+    margin-bottom: 100px;
+  }
+  .mobile-social-media-group {
+    flex-direction: column;
+  }
+  .mobile-social-media a {
+    border: none;
+  }
+  .modal-content {
+    width: 95%;
+  }
+  .modal-label {
+    width: 95%;
+  }
+  .modal-label input {
+    width: 100%;
+  }
+  .modal-label-textarea {
+    width: 95%;
+  }
+  .modal-label-textarea textarea {
+    width: 100%;
+  }
+  .test {
+    padding-left: 3%;
+    width: 80%;
+  }
+  .qualities-rect {
+    width: 250px;
+  }
+  .qualities-content {
+    width: 250px;
+  }
+  .card {
+    width: 95%;
+    margin: auto 5px;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+  }
+  .button-list {
+    padding-left: 10px;
+  }
+  .project {
+    width: 95%;
+  }
+  .project-animation img {
+    width: 100%;
+    height: auto;
+  }
+  .input-button-container input[type="email"] {
+    padding: 5px 6px;
+    width: 250px;
+    height: 50px;
+  }
+}
+
 /* Tablet design */
 @media screen and (min-width: 768px) {
   .container {
@@ -1002,11 +1076,16 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 768px;
     justify-content: center;
     gap: 30px;
   }
 
+  .paragraph-svg {
+    padding: 25px 142px;
+  }
+  .paragraph-section div {
+    width: 354px;
+  }
   .our-team ul {
     display: flex;
     flex-direction: row;
@@ -1019,6 +1098,7 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 768px;
   }
 
   .service-request-section {
@@ -1062,6 +1142,15 @@ ul {
 /* Desktop design */
 
 @media screen and (min-width: 1158px) {
+  .global-header {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ececec;
+    width: 100%;
+  }
+
   .container {
     width: 100%;
     margin: 0 auto;
@@ -1076,6 +1165,11 @@ ul {
     border-radius: 4px;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .service-request-section h1 {
+    font-size: 44px;
+    max-width: 696px;
   }
 
   .form-field,
@@ -1104,6 +1198,7 @@ ul {
     display: flex;
     gap: 10px;
     align-items: center;
+    flex-shrink: 0;
   }
 
   a.global-header {
@@ -1118,6 +1213,13 @@ ul {
     width: 100%;
     align-items: center;
     justify-content: center;
+  }
+  .paragraph-svg {
+    padding: 25px 100px;
+  }
+
+  .paragraph-section div {
+    width: 270px;
   }
 
   .our-team ul {
@@ -1182,6 +1284,9 @@ ul {
     padding-right: 94px;
   }
 
+  .logo {
+    padding: 0;
+  }
   .small-container .logo-adress {
     display: flex;
     flex-direction: column;
@@ -1211,7 +1316,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .regular-customers div {
